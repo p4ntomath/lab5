@@ -17,9 +17,6 @@ app.get('/whoami', (req, res) => {
 });
 
 app.get('/books', (req, res) => {
-  if (books.length === 0) {
-    return res.status(404).json({ error: 'No books found' });
-  }
   res.json(books);
 });
 
